@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Form</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: 300;
+        font-size: 17px;
+        padding: 8px;
+      }
+
+      .container {
+        padding: 20px;
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-top: 2.5%;
+        margin-bottom: 2.5%;
+        border: 1px solid #ff8c8c;
+        border-radius: 7px;
+        background-color: rgba(250, 235, 215, 0.318);
+      }
+
+      .heading {
+        text-align: center;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      input[type="date"],
+      input[type="password"],
+      select,
+      textarea {
+        background-color: rgba(255, 235, 205, 0.285);
+        border: 1px solid #ff8c8c;
+        border-radius: 7px;
+        width: 100%;
+        padding: 7px;
+        margin: 10px;
+      }
+
+      input[type="submit"] {
+        padding: 10px;
+        width: 20%;
+        background-color: rgba(128, 255, 0, 0.374);
+        border: none;
+        border-radius: 7px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: rgba(128, 255, 0, 0.58);
+      }
+
+      fieldset {
+        background-color: rgba(255, 235, 205, 0.285);
+        border: 1px solid #ff8c8c;
+        border-radius: 7px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form action="">
+        <h1 class="heading">Payment Form</h1>
+        <hr />
+        <h3>Contact Information</h3>
+        <p>Name : <input type="text" name="fullname" required placeholder="John Doe"/></p>
+
+        <fieldset>
+          <legend><p>Gender :</p></legend>
+          <p>
+            <input type="radio" name="gender" id="male" /> Male <br />
+            <input type="radio" name="gender" id="female" />Female <br />
+            <input type="radio" name="gender" id="other" />Other
+          </p>
+        </fieldset>
+
+        <p>
+          Address :
+          <textarea name="address" id="address" cols="20" rows="3" placeholder="69, Rangadiya Mohalla, Pali, Rajasthan, 306401"></textarea>
+        </p>
+        <p>Email : <input type="email" name="email" id="email" required placeholder="sonifastforwardd.ds@gmail.com"/></p>
+        <p>
+          Pincode : <input type="number" name="pincode" id="pincode" required placeholder="306401"/>
+        </p>
+        <hr />
+
+        <h3>Payment Information</h3>
+        <p>
+          Card Type :
+          <select name="card_type" id="card_type" required>
+            <option value="">--Select a Card Type--</option>
+            <option value="visa">VISA</option>
+            <option value="mastercard">MasterCard</option>
+            <option value="rupay">Rupay</option>
+          </select>
+        </p>
+        <p>
+          Card Number :
+          <input type="number" name="card_number" id="card_number" required placeholder="1111-2222-3333-4444"/>
+        </p>
+        <p>
+          Expiration Date :
+          <input type="date" name="expiry_date" id="expiry_date" required/>
+        </p>
+        <p>CVV : <input type="password" name="cvv" id="cvv" required placeholder="123"/></p>
+
+        <center><input type="submit" value="Pay" /></center>
+      </form>
+    </div>
+  </body>
+</html>
